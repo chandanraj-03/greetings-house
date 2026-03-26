@@ -290,6 +290,17 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* Scroll Reveal Animation */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .card-frame { margin: 20px; padding: 20px; }
@@ -329,9 +340,9 @@
 <div class="page-wrap">
 
   <div class="om-header">
-    <span class="om-symbol">ॐ</span>
+    <span class="om-symbol"></span>
   </div>
-
+  <p style="text-align: center; font-size: 2.2rem; font-weight: bold; color: var(--gold-light);">ॐ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br> निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p>
   <div class="card-frame">
     <span class="corner tl">❋</span>
     <span class="corner tr">❋</span>
@@ -340,11 +351,10 @@
 
     <div class="card-inner">
 
-      <!-- Invitation image -->
       <img class="invite-img" src="https://drive.google.com/thumbnail?id=1cNY5KIIqLHvdfHkFPlr-JjPu_pgiKJwj&sz=w1000"> 
       <div class="divider">
         <div class="divider-line"></div>
-        <span class="divider-icon">🪔</span>
+        <span class="divider-icon">🪔 &nbsp;&nbsp;🪔&nbsp;&nbsp;🪔&nbsp;&nbsp;🪔&nbsp;&nbsp;🪔</span>
         <div class="divider-line"></div>
       </div>
 
@@ -354,7 +364,7 @@
 
         <div class="info-grid">
 
-          <div class="info-row">
+          <div class="info-row scroll-reveal">
             <span class="info-icon">📅</span>
             <div class="info-text">
               <div class="info-label">तारीख / Date</div>
@@ -363,7 +373,7 @@
             </div>
           </div>
 
-          <div class="info-row">
+          <div class="info-row scroll-reveal">
             <span class="info-icon">⏰</span>
             <div class="info-text">
               <div class="info-label">कार्यक्रम / Schedule</div>
@@ -372,31 +382,52 @@
               <div class="info-value">प्रसादी (प्रीतिभोज) — संध्या 8 बजे</div>
             </div>
           </div>
+          <div class="info-row scroll-reveal" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=25.6055738,85.1808067','_blank')" style="cursor: pointer; padding: 12px; gap: 12px; align-items: stretch; max-width: 100%;">
+            
+            <!-- Left Icon -->
+            <span class="info-icon" style="font-size: 22px; margin-top: 2px;">📍</span>
 
-          <a href="https://www.google.com/maps/dir/?api=1&destination=25.6055738,85.1808067" target="_blank" style="text-decoration: none; display: block;">
-            <div class="info-row" style="cursor: pointer;">
-              <span class="info-icon">📍</span>
-              <div class="info-text">
-                <div class="info-label">स्थान / Venue</div>
-                <div class="info-value">कृष्णा सदन, संदलपुर अखाड़ा रोड</div>
-                <div class="info-value">आर.के. कॉलोनी, संदलपुर</div>
-                <div class="info-value">बालार समिति, पटना – 800006</div>
-                <div class="info-label" style="color: var(--saffron); text-transform: none; margin-top: 5px; font-size: 0.8rem;">🗺️ Click here for Map & Directions</div>
+            <!-- Text Content -->
+            <div class="info-text" style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="info-label" style="font-size: 0.85rem; text-transform: none; font-weight: bold; color: var(--deep-red); margin-bottom: 4px;">स्थान / Venue</div>
+              
+              <div class="info-value" style="font-size: 0.95rem; line-height: 1.45;">
+                कृष्णा सदन, संदलपुर अखाड़ा रोड<br>
+                आर.के. कॉलोनी, संदलपुर<br>
+                बालार समिति, पटना – 800006
+              </div>
+
+              <!-- Call -->
+              <div style="margin-top: 8px;">
+                <a href="tel:+919199036852" onclick="event.stopPropagation()" style="color: var(--deep-red); font-size: 0.9rem; text-decoration: none; font-weight: bold; background: rgba(255,255,255,0.6); padding: 4px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                  📞 Call: +91 9199036852
+                </a>
+              </div>
+
+              <!-- Map Hint -->
+              <div style="color: var(--saffron); font-size: 0.85rem; margin-top: 6px; font-weight: bold;">
+                🗺️ Click for Map & Directions
               </div>
             </div>
-          </a>
 
-        </div>
+            <!-- Thumbnail Image -->
+            <div style="width: 110px; height: 110px; border-radius: 8px; overflow: hidden; border: 2px solid var(--gold); flex-shrink: 0; align-self: center; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+              <img src="https://drive.google.com/thumbnail?id=1YFuqUkMWhHk8es4ARZhZFf1hOrbRoSC8&sz=w200" alt="Venue Map" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
 
-        <div class="hosts-block">
+          </div>
+
+
+          
+        <div class="hosts-block scroll-reveal">
           <div class="hosts-label">🙏 निमंत्रणकर्ता / Your Hosts</div>
           <div class="hosts-names">
-            डॉ. दिलीप गुप्ता &nbsp;•&nbsp; रंजीत गुप्ता &nbsp;•&nbsp; अमरजीत गुप्ता
+                <b>डॉ. दिलीप गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; रंजीत गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; अमरजीत गुप्ता</b>
           </div>
           <div class="hosts-welcome">स्वागतकर्ता: <span>श्रीमती किरण गुप्ता, डॉ. कृष्णा नन्द गुप्ता, सोनू, सलोनी कुमारी </span></div>
         </div>
 
-        <div class="blessing">
+        <div class="blessing scroll-reveal">
           "आपकी उपस्थिति हमारे लिए अत्यंत मंगलमय होगी।"<br>
           <small style="color:#888; font-size:0.8rem;">कृपया सपरिवार पधार कर हमें अनुगृहीत करें।</small>
         </div>
@@ -406,5 +437,22 @@
   </div>
 
 <div class="bottom-border"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -20px 0px" });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
 </body>
 </html>
