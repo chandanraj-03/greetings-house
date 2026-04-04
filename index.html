@@ -29,7 +29,6 @@
       overflow-x: hidden;
     }
 
-    /* Floating petals */
     .petal { position: fixed; pointer-events: none; z-index: 0; font-size: 1.4rem; animation: fall linear infinite; opacity: 0.6; }
     .petal:nth-child(1)  { left: 5%;  animation-duration: 12s; animation-delay: 0s;   }
     .petal:nth-child(2)  { left: 15%; animation-duration: 14s; animation-delay: 2s;   }
@@ -47,7 +46,6 @@
       100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
     }
 
-    /* Gold top border */
     .top-border {
       width: 100%;
       height: 8px;
@@ -64,7 +62,6 @@
       padding: 20px 16px 40px;
     }
 
-    /* OM symbol header */
     .om-header {
       text-align: center;
       margin: 18px 0 8px;
@@ -79,7 +76,6 @@
       line-height: 1;
     }
 
-    /* Card container */
     .card-frame {
       background: linear-gradient(160deg, #FFF8EA 0%, #FDF0D0 40%, #FAE8B8 100%);
       border-radius: 18px;
@@ -94,7 +90,6 @@
       position: relative;
     }
 
-    /* Corner ornaments */
     .corner {
       position: absolute;
       font-size: 2rem;
@@ -116,7 +111,6 @@
       overflow: hidden;
     }
 
-    /* Watermark */
     .card-inner::before {
       content: "ॐ";
       position: absolute;
@@ -129,7 +123,6 @@
       pointer-events: none;
     }
 
-    /* Invite image */
     .invite-img {
       width: 100%;
       border-radius: 10px;
@@ -143,7 +136,6 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.25);
     }
 
-    /* Divider */
     .divider {
       display: flex;
       align-items: center;
@@ -157,7 +149,6 @@
     }
     .divider-icon { font-size: 1.4rem; color: var(--gold); }
 
-    /* Details block */
     .details {
       text-align: center;
       padding: 0 8px;
@@ -225,7 +216,19 @@
       color: #444;
     }
 
-    /* Hosts block */
+    .map-btn {
+      white-space: nowrap;
+      display: inline-block;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      border: none;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.6);
+      color: var(--deep-red);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     .hosts-block {
       margin-top: 20px;
       background: linear-gradient(135deg, rgba(155,28,28,0.06), rgba(200,150,12,0.08));
@@ -261,7 +264,6 @@
       font-family: 'Tiro Devanagari Hindi', serif;
     }
 
-    /* Blessing footer */
     .blessing {
       margin-top: 22px;
       text-align: center;
@@ -273,7 +275,6 @@
       padding: 0 10px;
     }
 
-    /* Bottom gold border */
     .bottom-border {
       width: 100%;
       height: 8px;
@@ -290,7 +291,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* Scroll Reveal Animation */
     .scroll-reveal {
       opacity: 0;
       transform: translateY(25px);
@@ -301,23 +301,9 @@
       transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .card-frame { margin: 20px; padding: 20px; }
-      .card-inner { padding: 30px 20px; }
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.5rem; }
-    }
     @media (max-width: 480px) {
       .card-frame { margin: 12px; padding: 15px; border-width: 8px; }
       .card-inner { padding: 25px 15px; }
-      h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.3rem; letter-spacing: 0.08em; }
-      .date-time { font-size: 0.9rem; flex-direction: column; gap: 8px; }
-      .divider { width: 70%; }
-      .hosts-block { padding: 12px 10px; }
-      .info-row { padding: 8px 10px; gap: 8px; }
-      .info-text .info-value { font-size: 0.85rem; }
       .details-title { font-size: 1.25rem; }
       .om-symbol { font-size: 2.4rem; }
     }
@@ -325,7 +311,6 @@
 </head>
 <body>
 
-<!-- Floating flower petals -->
 <span class="petal">🌸</span>
 <span class="petal">🌼</span>
 <span class="petal">🌺</span>
@@ -343,6 +328,7 @@
     <span class="om-symbol"></span>
   </div>
   <p style="text-align: center; font-size: 2.2rem; font-weight: bold; color: var(--gold-light);">ॐ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br> निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</p>
+
   <div class="card-frame">
     <span class="corner tl">❋</span>
     <span class="corner tr">❋</span>
@@ -351,7 +337,8 @@
 
     <div class="card-inner">
 
-      <img class="invite-img" src="https://drive.google.com/thumbnail?id=1cNY5KIIqLHvdfHkFPlr-JjPu_pgiKJwj&sz=w1000"> 
+      <img class="invite-img" src="https://drive.google.com/thumbnail?id=1cNY5KIIqLHvdfHkFPlr-JjPu_pgiKJwj&sz=w1000">
+
       <div class="divider">
         <div class="divider-line"></div>
         <span class="divider-icon">🪔 &nbsp;&nbsp;🪔&nbsp;&nbsp;🪔&nbsp;&nbsp;🪔&nbsp;&nbsp;🪔</span>
@@ -382,15 +369,15 @@
               <div class="info-value">प्रसादी (प्रीतिभोज) — संध्या 8 बजे</div>
             </div>
           </div>
-          <div class="info-row scroll-reveal" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=25.6055738,85.1808067','_blank')" style="cursor: pointer; padding: 12px; gap: 12px; align-items: stretch; max-width: 100%;">
-            
-            <!-- Left Icon -->
+
+          <!-- Venue Row -->
+          <div class="info-row scroll-reveal" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=25.6055738,85.1808067','_blank')" style="cursor: pointer; padding: 12px; gap: 12px; align-items: flex-start; max-width: 100%;">
+
             <span class="info-icon" style="font-size: 22px; margin-top: 2px;">📍</span>
 
-            <!-- Text Content -->
-            <div class="info-text" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="info-text" style="display: flex; flex-direction: column;">
               <div class="info-label" style="font-size: 0.85rem; text-transform: none; font-weight: bold; color: var(--deep-red); margin-bottom: 4px;">स्थान / Venue</div>
-              
+
               <div class="info-value" style="font-size: 0.95rem; line-height: 1.45;">
                 राधे कृष्ण निवास, संदलपुर अखाड़ा रोड<br>
                 आर.के. कॉलोनी, संदलपुर<br>
@@ -403,44 +390,33 @@
                   📞 Call: +91 9199036852
                 </a>
               </div>
-              
-              <!-- Map Hint -->
-              <div style="color: var(--saffron); font-size: 0.85rem; margin-top: 6px; font-weight: bold;">
-                <button class= ".info-text" >🗺️ Click here for Map & Directions</button>
-              </div>
-              <style>
-            .info-text{
-  white-space: nowrap;       /* prevents line break */
-  display: inline-block;
-  padding: 6px 10px;
-  font-size: 0.85rem;
-  border: none;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.6);
-  color: var(--deep-red);
-  font-weight: bold;
-  cursor: pointer;
-}
-                </style>
-            </div>
 
-            <!-- Thumbnail Image -->
-            <div class="qr-wrapper" style="margin-top:12px; text-aling: center;">
-      <div class="qr-box">
-        <img src="https://drive.google.com/thumbnail?id=1YFuqUkMWhHk8es4ARZhZFf1hOrbRoSC8&sz=w200">
-      </div>
-      <p class="qr-text">📷 Scan me!! </p>
-    </div>
+              <!-- Map Button -->
+              <div style="color: var(--saffron); font-size: 0.85rem; margin-top: 6px; font-weight: bold;">
+                <button class="map-btn">🗺️ Click here for Map &amp; Directions</button>
+              </div>
+
+              <!-- QR Code — just below the button -->
+              <div style="margin-top: 10px; text-align: center;">
+                <img
+                  src="https://drive.google.com/thumbnail?id=1YFuqUkMWhHk8es4ARZhZFf1hOrbRoSC8&sz=w200"
+                  alt="QR Code"
+                  style="width: 120px; height: 120px; border-radius: 8px; border: 2px solid var(--gold); display: block; margin: 0 auto;"
+                >
+                <p style="font-size: 0.78rem; color: var(--saffron); font-weight: bold; margin-top: 5px;">📷 Scan me!!</p>
+              </div>
+
+            </div>
           </div>
 
+        </div><!-- end info-grid -->
 
-          
         <div class="hosts-block scroll-reveal">
           <div class="hosts-label">🙏 निमंत्रणकर्ता / Hosts</div>
           <div class="hosts-names">
-                <b>डॉ. दिलीप गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; रंजीत गुप्ता &nbsp; &nbsp; <br>•&nbsp; अमरजीत गुप्ता</b>
+            <b>डॉ. दिलीप गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; रंजीत गुप्ता &nbsp; &nbsp; <br>•&nbsp; अमरजीत गुप्ता</b>
           </div>
-          <div class="hosts-welcome">स्वागतकर्ता: <span>श्रीमती किरण गुप्ता, डॉ. कृष्णा नन्द गुप्ता, सोनू, सलोनी कुमारी </span></div>
+          <div class="hosts-welcome">स्वागतकर्ता: <span>श्रीमती किरण गुप्ता, डॉ. कृष्णा नन्द गुप्ता, सोनू, सलोनी कुमारी</span></div>
         </div>
 
         <div class="blessing scroll-reveal">
@@ -452,7 +428,9 @@
     </div>
   </div>
 
-<div class="bottom-border"></div>
+  <div class="bottom-border"></div>
+
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
