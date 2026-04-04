@@ -405,15 +405,43 @@
               </div>
 
               <!-- Map Hint -->
-              <div style="color: var(--saffron); font-size: 0.85rem; margin-top: 6px; font-weight: bold;">
-                <button>🗺️ Click here for Map & Directions</button>
-              </div>
+<div style="margin-top: 6px;">
+  <button class="map-btn">🗺️ Click here for Map & Directions</button>
+</div>
+
+<style>
+.map-btn {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 50px; /* pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Hover effect */
+.map-btn:hover {
+  background: #e69500; /* slightly darker saffron */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* Click effect */
+.map-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+</style>
             </div>
 
             <!-- Thumbnail Image -->
             <div style="width: 110px; height: 110px; border-radius: 8px; overflow: hidden; border: 2px solid var(--gold); flex-shrink: 0; align-self: center; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
               <img src="https://drive.google.com/thumbnail?id=1YFuqUkMWhHk8es4ARZhZFf1hOrbRoSC8&sz=w200" alt="Venue Map" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-            <h2>Scan me!!</h2>
+            <p>Scan me!!<p>
             </div>
 
           </div>
@@ -423,7 +451,7 @@
         <div class="hosts-block scroll-reveal">
           <div class="hosts-label">🙏 निमंत्रणकर्ता / Your Hosts</div>
           <div class="hosts-names">
-                <b>डॉ. दिलीप गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; रंजीत गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; अमरजीत गुप्ता</b>
+                <b>डॉ. दिलीप गुप्ता &nbsp; &nbsp; &nbsp;•&nbsp; रंजीत गुप्ता &nbsp; &nbsp; &nbsp<br>;•&nbsp; अमरजीत गुप्ता</b>
           </div>
           <div class="hosts-welcome">स्वागतकर्ता: <span>श्रीमती किरण गुप्ता, डॉ. कृष्णा नन्द गुप्ता, सोनू, सलोनी कुमारी </span></div>
         </div>
